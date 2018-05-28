@@ -1,0 +1,17 @@
+// 引入配置
+@import "../config/index.less";
+#app{
+    display: flex;
+    height: 100%;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: space-between;
+    .test-class {
+        background-color: @primary;
+        width: 100px;
+        color: #fff;
+        height: 100px;
+        border: 1px solid #000;
+        border-radius: 4px;
+    }
+}

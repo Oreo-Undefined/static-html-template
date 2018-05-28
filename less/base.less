@@ -1,0 +1,27 @@
+// 主要定义一些基础、公共的样式
+
+// 引入配置文件
+@import "../config/index.less";
+
+// 公共样式定义
+
+body,html {
+    font-family: @font-family;
+//  .font-size();
+    color: @dark;
+    background-color: @white;
+    height: 100%;
+    width: 100%;
+    .loop(30);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.loop(@count)when(@count > 12){
+    .px-@{count}{
+        font-size: (1px * @count);
+    }
+    .loop((@count - 1));
+}
+
